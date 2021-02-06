@@ -9,7 +9,7 @@
 *                                                                           *
 ****************************************************************************/
 #pragma once
-#include <Project64\WTLApp.h>
+#include <Project64/WTLApp.h>
 
 class CEditEnhancement;
 

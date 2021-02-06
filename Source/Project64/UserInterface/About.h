@@ -9,7 +9,7 @@
 *                                                                           *
 ****************************************************************************/
 #pragma once
-#include <Project64\UserInterface\WTLControls\wtl-BitmapPicture.h>
+#include <Project64/UserInterface/WTLControls/wtl-BitmapPicture.h>
 #include "resource.h"
 
 class CAboutDlg :

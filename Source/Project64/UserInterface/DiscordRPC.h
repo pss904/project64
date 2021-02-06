@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include <3rdParty\discord-rpc\include\discord_rpc.h>
+#include <3rdParty/discord-rpc/include/discord_rpc.h>
 
 class CDiscord
 {

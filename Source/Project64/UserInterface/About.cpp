@@ -1,5 +1,5 @@
 #include <stdafx.h>
-#include <Project64\UserInterface\About.h>
+#include <Project64/UserInterface/About.h>
 
 CAboutDlg::CAboutDlg(CProjectSupport & Support) :
     m_Support(Support)

@@ -10,7 +10,7 @@
 ****************************************************************************/
 #include "stdafx.h"
 #include "RomInformationClass.h"
-#include <Project64\UserInterface\About.h>
+#include <Project64/UserInterface/About.h>
 
 #include <commctrl.h>
 #include <Project64-core/Settings/SettingType/SettingsType-Application.h>

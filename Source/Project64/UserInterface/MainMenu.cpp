@@ -4,7 +4,7 @@
 #include "Debugger/ScriptSystem.h"
 #include "DiscordRPC.h"
 #include <Project64-core/N64System/N64DiskClass.h>
-#include <Project64\UserInterface\About.h>
+#include <Project64/UserInterface/About.h>
 #include <windows.h>
 #include <commdlg.h>
 

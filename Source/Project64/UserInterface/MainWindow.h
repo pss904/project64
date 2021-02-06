@@ -13,9 +13,9 @@
 #include "../Settings/GuiSettings.h"
 #include <Project64/UserInterface/Debugger/debugger.h>
 #include <Project64-core/Plugins/PluginClass.h>
-#include <Project64\UserInterface\CheatClassUI.h>
-#include <Project64\UserInterface\EnhancementUI.h>
-#include <Project64\UserInterface\ProjectSupport.h>
+#include <Project64/UserInterface/CheatClassUI.h>
+#include <Project64/UserInterface/EnhancementUI.h>
+#include <Project64/UserInterface/ProjectSupport.h>
 
 class CGfxPlugin;      //Plugin that controls the rendering
 class CAudioPlugin;    //Plugin for audio, need the hwnd
