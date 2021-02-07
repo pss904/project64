@@ -29,7 +29,7 @@ $CC -o $obj/AppInit.asm                 $src/AppInit.cpp $CPP_FLAGS
 $CC -o $obj/logging.asm                 $src/Logging.cpp $CPP_FLAGS
 $CC -o $obj/MemoryExceptionFilter.asm   $src/MemoryExceptionFilter.cpp $CPP_FLAGS
 $CC -o $obj/Multilanguage/LangClass.asm $src/Multilanguage/LanguageClass.cpp $CPP_FLAGS
-$CC -o $obj/N64System/CheatClass.asm    $src/N64System/CheatClass.cpp $CPP_FLAGS
+#$CC -o $obj/N64System/CheatClass.asm    $src/N64System/CheatClass.cpp $CPP_FLAGS #file does not exist
 $CC -o $obj/N64System/EmuThread.asm     $src/N64System/EmulationThread.cpp $CPP_FLAGS
 $CC -o $obj/N64System/FPSClass.asm      $src/N64System/FramePerSecondClass.cpp $CPP_FLAGS
 $CC -o $obj/N64System/interp/CPU.asm    $src/N64System/Interpreter/InterpreterCPU.cpp $CPP_FLAGS
@@ -76,17 +76,17 @@ $CC -o $obj/Plugins/Graphics.asm        $src/Plugins/GFXPlugin.cpp $CPP_FLAGS
 $CC -o $obj/Plugins/PluginBase.asm      $src/Plugins/PluginBase.cpp $CPP_FLAGS
 $CC -o $obj/Plugins/PluginClass.asm     $src/Plugins/PluginClass.cpp $CPP_FLAGS
 $CC -o $obj/Plugins/RSP.asm             $src/Plugins/RSPPlugin.cpp $CPP_FLAGS
-$CC -o $obj/Settings/RomList.asm        $src/RomList/RomList.cpp $CPP_FLAGS
+#$CC -o $obj/Settings/RomList.asm        $src/RomList/RomList.cpp $CPP_FLAGS
 $CC -o $obj/Settings/Debug.asm          $src/Settings/DebugSettings.cpp $CPP_FLAGS
 $CC -o $obj/Settings/Game.asm           $src/Settings/GameSettings.cpp $CPP_FLAGS
 $CC -o $obj/Settings/Logging.asm        $src/Settings/LoggingSettings.cpp $CPP_FLAGS
 $CC -o $obj/Settings/N64System.asm      $src/Settings/N64SystemSettings.cpp $CPP_FLAGS
 $CC -o $obj/Settings/Recompiler.asm     $src/Settings/RecompilerSettings.cpp $CPP_FLAGS
-$CC -o $obj/Settings/SettingsClass.asm  $src/Settings/SettingsClass.cpp $CPP_FLAGS
+#$CC -o $obj/Settings/SettingsClass.asm  $src/Settings/SettingsClass.cpp $CPP_FLAGS
 $CC -o $obj/Settings/type/App.asm       $src/Settings/SettingType/SettingsType-Application.cpp $CPP_FLAGS
 $CC -o $obj/Settings/type/AppIndex.asm  $src/Settings/SettingType/SettingsType-ApplicationIndex.cpp $CPP_FLAGS
 $CC -o $obj/Settings/type/AppPath.asm   $src/Settings/SettingType/SettingsType-ApplicationPath.cpp $CPP_FLAGS
-$CC -o $obj/Settings/type/Cheats.asm    $src/Settings/SettingType/SettingsType-Cheats.cpp $CPP_FLAGS
+#$CC -o $obj/Settings/type/Cheats.asm    $src/Settings/SettingType/SettingsType-Cheats.cpp $CPP_FLAGS
 $CC -o $obj/Settings/type/GSetting.asm  $src/Settings/SettingType/SettingsType-GameSetting.cpp $CPP_FLAGS
 $CC -o $obj/Settings/type/GSettingX.asm $src/Settings/SettingType/SettingsType-GameSettingIndex.cpp $CPP_FLAGS
 $CC -o $obj/Settings/type/RDBCpu.asm    $src/Settings/SettingType/SettingsType-RDBCpuType.cpp $CPP_FLAGS
@@ -110,7 +110,7 @@ $AS -o $obj/AppInit.o                   $obj/AppInit.asm
 $AS -o $obj/logging.o                   $obj/logging.asm
 $AS -o $obj/MemoryExceptionFilter.o     $obj/MemoryExceptionFilter.asm
 $AS -o $obj/Multilanguage/LangClass.o   $obj/Multilanguage/LangClass.asm
-$AS -o $obj/N64System/CheatClass.o      $obj/N64System/CheatClass.asm
+#$AS -o $obj/N64System/CheatClass.o      $obj/N64System/CheatClass.asm
 $AS -o $obj/N64System/EmuThread.o       $obj/N64System/EmuThread.asm
 $AS -o $obj/N64System/FPSClass.o        $obj/N64System/FPSClass.asm
 $AS -o $obj/N64System/interp/CPU.o      $obj/N64System/interp/CPU.asm
@@ -157,17 +157,17 @@ $AS -o $obj/Plugins/Graphics.o          $obj/Plugins/Graphics.asm
 $AS -o $obj/Plugins/PluginBase.o        $obj/Plugins/PluginBase.asm
 $AS -o $obj/Plugins/PluginClass.o       $obj/Plugins/PluginClass.asm
 $AS -o $obj/Plugins/RSP.o               $obj/Plugins/RSP.asm
-$AS -o $obj/Settings/RomList.o          $obj/Settings/RomList.asm
+#$AS -o $obj/Settings/RomList.o          $obj/Settings/RomList.asm
 $AS -o $obj/Settings/Debug.o            $obj/Settings/Debug.asm
 $AS -o $obj/Settings/Game.o             $obj/Settings/Game.asm
 $AS -o $obj/Settings/Logging.o          $obj/Settings/Logging.asm
 $AS -o $obj/Settings/N64System.o        $obj/Settings/N64System.asm
 $AS -o $obj/Settings/Recompiler.o       $obj/Settings/Recompiler.asm
-$AS -o $obj/Settings/SettingsClass.o    $obj/Settings/SettingsClass.asm
+#$AS -o $obj/Settings/SettingsClass.o    $obj/Settings/SettingsClass.asm
 $AS -o $obj/Settings/type/App.o         $obj/Settings/type/App.asm
 $AS -o $obj/Settings/type/AppIndex.o    $obj/Settings/type/AppIndex.asm
 $AS -o $obj/Settings/type/AppPath.o     $obj/Settings/type/AppPath.asm
-$AS -o $obj/Settings/type/Cheats.o      $obj/Settings/type/Cheats.asm
+#$AS -o $obj/Settings/type/Cheats.o      $obj/Settings/type/Cheats.asm
 $AS -o $obj/Settings/type/GSetting.o    $obj/Settings/type/GSetting.asm
 $AS -o $obj/Settings/type/GSettingX.o   $obj/Settings/type/GSettingX.asm
 $AS -o $obj/Settings/type/RDBCpu.o      $obj/Settings/type/RDBCpu.asm
@@ -185,12 +185,90 @@ $AS -o $obj/Settings/type/TmpNumber.o   $obj/Settings/type/TmpNumber.asm
 $AS -o $obj/Settings/type/TmpString.o   $obj/Settings/type/TmpString.asm
 
 # $obj/7zip.o \
+# OBJ_LIST="\
+# $obj/AppInit.o \
+# $obj/logging.o \
+# $obj/MemoryExceptionFilter.o \
+# $obj/Multilanguage/LangClass.o \
+# $obj/N64System/CheatClass.o \
+# $obj/N64System/EmuThread.o \
+# $obj/N64System/FPSClass.o \
+# $obj/N64System/interp/CPU.o \
+# $obj/N64System/interp/Ops.o \
+# $obj/N64System/interp/Ops32.o \
+# $obj/N64System/Mips/Audio.o \
+# $obj/N64System/Mips/Disk.o \
+# $obj/N64System/Mips/Dma.o \
+# $obj/N64System/Mips/Eeprom.o \
+# $obj/N64System/Mips/FlashRam.o \
+# $obj/N64System/Mips/GBCart.o \
+# $obj/N64System/Mips/Memory.o \
+# $obj/N64System/Mips/Mempak.o \
+# $obj/N64System/Mips/OpName.o \
+# $obj/N64System/Mips/PifRam.o \
+# $obj/N64System/Mips/RegClass.o \
+# $obj/N64System/Mips/Rumble.o \
+# $obj/N64System/Mips/Sram.o \
+# $obj/N64System/Mips/SyEvents.o \
+# $obj/N64System/Mips/SyTiming.o \
+# $obj/N64System/Mips/TLBclass.o \
+# $obj/N64System/Mips/Transfer.o \
+# $obj/N64System/N64Class.o \
+# $obj/N64System/N64DiskClass.o \
+# $obj/N64System/N64RomClass.o \
+# $obj/N64System/ProfileClass.o \
+# $obj/N64System/dynarec/Block.o \
+# $obj/N64System/dynarec/CSect.o \
+# $obj/N64System/dynarec/FnNfo.o \
+# $obj/N64System/dynarec/FnMap.o \
+# $obj/N64System/dynarec/Loop.o \
+# $obj/N64System/dynarec/Class.o \
+# $obj/N64System/dynarec/Mem.o \
+# $obj/N64System/dynarec/Ops.o \
+# $obj/N64System/dynarec/Reg.o \
+# $obj/N64System/dynarec/Sect.o \
+# $obj/N64System/dynarec/log.o \
+# $obj/N64System/dynarec/x86op.o \
+# $obj/N64System/SpeedLimiter.o \
+# $obj/N64System/SystemGlobals.o \
+# $obj/Plugins/Audio.o \
+# $obj/Plugins/Controller.o \
+# $obj/Plugins/Graphics.o \
+# $obj/Plugins/PluginBase.o \
+# $obj/Plugins/PluginClass.o \
+# $obj/Plugins/RSP.o \
+# $obj/Settings/RomList.o \
+# $obj/Settings/Debug.o \
+# $obj/Settings/Game.o \
+# $obj/Settings/Logging.o \
+# $obj/Settings/N64System.o \
+# $obj/Settings/Recompiler.o \
+# $obj/Settings/SettingsClass.o \
+# $obj/Settings/type/App.o \
+# $obj/Settings/type/AppIndex.o \
+# $obj/Settings/type/AppPath.o \
+# $obj/Settings/type/Cheats.o \
+# $obj/Settings/type/GSetting.o \
+# $obj/Settings/type/GSettingX.o \
+# $obj/Settings/type/RDBCpu.o \
+# $obj/Settings/type/RDBOnOff.o \
+# $obj/Settings/type/RDBRamSz.o \
+# $obj/Settings/type/RDBSaves.o \
+# $obj/Settings/type/RDBYesNo.o \
+# $obj/Settings/type/RelPath.o \
+# $obj/Settings/type/RomDb.o \
+# $obj/Settings/type/RomDbInx.o \
+# $obj/Settings/type/RomDbSet.o \
+# $obj/Settings/type/SelectDir.o \
+# $obj/Settings/type/TmpBool.o \
+# $obj/Settings/type/TmpNumber.o \
+# $obj/Settings/type/TmpString.o"
+
 OBJ_LIST="\
 $obj/AppInit.o \
 $obj/logging.o \
 $obj/MemoryExceptionFilter.o \
 $obj/Multilanguage/LangClass.o \
-$obj/N64System/CheatClass.o \
 $obj/N64System/EmuThread.o \
 $obj/N64System/FPSClass.o \
 $obj/N64System/interp/CPU.o \
@@ -237,17 +315,14 @@ $obj/Plugins/Graphics.o \
 $obj/Plugins/PluginBase.o \
 $obj/Plugins/PluginClass.o \
 $obj/Plugins/RSP.o \
-$obj/Settings/RomList.o \
 $obj/Settings/Debug.o \
 $obj/Settings/Game.o \
 $obj/Settings/Logging.o \
 $obj/Settings/N64System.o \
 $obj/Settings/Recompiler.o \
-$obj/Settings/SettingsClass.o \
 $obj/Settings/type/App.o \
 $obj/Settings/type/AppIndex.o \
 $obj/Settings/type/AppPath.o \
-$obj/Settings/type/Cheats.o \
 $obj/Settings/type/GSetting.o \
 $obj/Settings/type/GSettingX.o \
 $obj/Settings/type/RDBCpu.o \
