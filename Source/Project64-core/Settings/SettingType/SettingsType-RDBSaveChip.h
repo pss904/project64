@@ -30,7 +30,7 @@ public:
 
     //Update the settings
     virtual void Save (uint32_t Index, bool Value );
-    virtual void Save (uint32_t Index, uint32_t Value );
+    virtual void Save (uint32_t Index, int32_t Value );
     virtual void Save (uint32_t Index, const std::string & Value );
     virtual void Save (uint32_t Index, const char * Value );
 

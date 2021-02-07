@@ -96,7 +96,7 @@ void CSettingTypeRDBSaveChip::Save (uint32_t /*Index*/, bool /*Value*/ )
     g_Notify->BreakPoint(__FILE__, __LINE__);
 }
 
-void CSettingTypeRDBSaveChip::Save (uint32_t /*Index*/, uint32_t Value )
+void CSettingTypeRDBSaveChip::Save (uint32_t /*Index*/, int32_t Value )
 {
     switch (Value)
     {
