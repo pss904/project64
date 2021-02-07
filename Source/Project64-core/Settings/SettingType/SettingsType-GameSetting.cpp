@@ -257,7 +257,7 @@ void CSettingTypeGame::Save(uint32_t Index, const char * Value)
     {
         stdstr szDefault;
         CSettingTypeGame::LoadDefault(Index, szDefault);
-        if (_stricmp(szDefault.c_str(), Value) == 0)
+        if (strcmp(szDefault.c_str(), Value) == 0)
         {
             Delete(Index);
             return;

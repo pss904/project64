@@ -235,7 +235,7 @@ void CRomList::FillRomList(strlist & FileList, const char * Directory)
                         _splitpath(FileName.c_str(), drive2, dir2, FileName2, ext2);
 
                         WriteTrace(TraceUserInterface, TraceDebug, ": 6 %s", ext2);
-                        if (_stricmp(ext2, ".bin") == 0)
+                        if (strcmp(ext2, ".bin") == 0)
                         {
                             continue;
                         }
@@ -347,7 +347,7 @@ bool CRomList::LoadDataFromRomFile(const char * FileName, uint8_t * Data, int32_
 {
     uint8_t Test[0x20];
 
-    if (_strnicmp(&FileName[strlen(FileName) - 4], ".ZIP", 4) == 0)
+    if (strcmp(&FileName[strlen(FileName) - 4], ".ZIP") == 0)
     {
         int32_t len, port = 0, FoundRom;
         unz_file_info info;

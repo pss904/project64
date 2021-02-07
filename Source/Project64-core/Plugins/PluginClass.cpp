@@ -69,11 +69,11 @@ void CPlugins::PluginChanged(CPlugins * _this)
         return;
     }
 
-    bool bGfxChange = _stricmp(_this->m_GfxFile.c_str(), g_Settings->LoadStringVal(Game_Plugin_Gfx).c_str()) != 0;
-    bool bAudioChange = _stricmp(_this->m_AudioFile.c_str(), g_Settings->LoadStringVal(Game_Plugin_Audio).c_str()) != 0;
-    bool bRspChange = _stricmp(_this->m_RSPFile.c_str(), g_Settings->LoadStringVal(Game_Plugin_RSP).c_str()) != 0;
-    bool bContChange = _stricmp(_this->m_ControlFile.c_str(), g_Settings->LoadStringVal(Game_Plugin_Controller).c_str()) != 0;
-    bool bDirChange = _stricmp(_this->m_PluginDir.c_str(), g_Settings->LoadStringVal(_this->m_PluginDirSetting).c_str()) != 0;
+    bool bGfxChange = strcmp(_this->m_GfxFile.c_str(), g_Settings->LoadStringVal(Game_Plugin_Gfx).c_str()) != 0;
+    bool bAudioChange = strcmp(_this->m_AudioFile.c_str(), g_Settings->LoadStringVal(Game_Plugin_Audio).c_str()) != 0;
+    bool bRspChange = strcmp(_this->m_RSPFile.c_str(), g_Settings->LoadStringVal(Game_Plugin_RSP).c_str()) != 0;
+    bool bContChange = strcmp(_this->m_ControlFile.c_str(), g_Settings->LoadStringVal(Game_Plugin_Controller).c_str()) != 0;
+    bool bDirChange = strcmp(_this->m_PluginDir.c_str(), g_Settings->LoadStringVal(_this->m_PluginDirSetting).c_str()) != 0;
     WriteTrace(TracePlugins, TraceVerbose, "m_GfxFile: \"%s\" Game_Plugin_Gfx: \"%s\" changed: %s", _this->m_GfxFile.c_str(), g_Settings->LoadStringVal(Game_Plugin_Gfx).c_str(), bGfxChange ? "true" : "false");
     WriteTrace(TracePlugins, TraceVerbose, "m_AudioFile: \"%s\" Game_Plugin_Audio: \"%s\" changed: %s", _this->m_GfxFile.c_str(), g_Settings->LoadStringVal(Game_Plugin_Gfx).c_str(), bAudioChange ? "true" : "false");
     WriteTrace(TracePlugins, TraceVerbose, "m_RSPFile: \"%s\" Game_Plugin_RSP: \"%s\" changed: %s", _this->m_GfxFile.c_str(), g_Settings->LoadStringVal(Game_Plugin_Gfx).c_str(), bRspChange ? "true" : "false");
@@ -321,10 +321,10 @@ bool CPlugins::Reset(CN64System * System)
 {
     WriteTrace(TracePlugins, TraceDebug, "Start");
 
-    bool bGfxChange = _stricmp(m_GfxFile.c_str(), g_Settings->LoadStringVal(Game_Plugin_Gfx).c_str()) != 0;
-    bool bAudioChange = _stricmp(m_AudioFile.c_str(), g_Settings->LoadStringVal(Game_Plugin_Audio).c_str()) != 0;
-    bool bRspChange = _stricmp(m_RSPFile.c_str(), g_Settings->LoadStringVal(Game_Plugin_RSP).c_str()) != 0;
-    bool bContChange = _stricmp(m_ControlFile.c_str(), g_Settings->LoadStringVal(Game_Plugin_Controller).c_str()) != 0;
+    bool bGfxChange = strcmp(m_GfxFile.c_str(), g_Settings->LoadStringVal(Game_Plugin_Gfx).c_str()) != 0;
+    bool bAudioChange = strcmp(m_AudioFile.c_str(), g_Settings->LoadStringVal(Game_Plugin_Audio).c_str()) != 0;
+    bool bRspChange = strcmp(m_RSPFile.c_str(), g_Settings->LoadStringVal(Game_Plugin_RSP).c_str()) != 0;
+    bool bContChange = strcmp(m_ControlFile.c_str(), g_Settings->LoadStringVal(Game_Plugin_Controller).c_str()) != 0;
 
     //if GFX and Audio has changed we also need to force reset of RSP
     if (bGfxChange || bAudioChange)

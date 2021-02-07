@@ -226,7 +226,7 @@ bool CEnhancmentFile::MoveToSection(const char * Section, bool ChangeCurrentSect
             m_lastSectionSearch = (m_File.GetPosition() - DataSize) + ReadPos;
             m_SectionsPos.insert(FILELOC::value_type(CurrentSection, m_lastSectionSearch));
 
-            if (_stricmp(Section, CurrentSection) != 0)
+            if (strcmp(Section, CurrentSection) != 0)
             {
                 continue;
             }

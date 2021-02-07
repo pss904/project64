@@ -200,7 +200,7 @@ void AddRecentRom(const char * ImagePath)
     strlist::iterator iter;
     for (iter = RecentGames.begin(); iter != RecentGames.end(); iter++)
     {
-        if (_stricmp(ImagePath, iter->c_str()) != 0)
+        if (strcmp(ImagePath, iter->c_str()) != 0)
         {
             continue;
         }

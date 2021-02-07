@@ -141,7 +141,7 @@ void CMainMenu::OnOpenRom(HWND hWnd)
     }
     
     stdstr ext = CPath(File).GetExtension();
-    if ((_stricmp(ext.c_str(), "ndd") != 0) && (_stricmp(ext.c_str(), "d64") != 0))
+    if ((strcmp(ext.c_str(), "ndd") != 0) && (strcmp(ext.c_str(), "d64") != 0))
     {
         g_BaseSystem->RunFileImage(File.c_str());
         return;
@@ -229,11 +229,11 @@ void CMainMenu::OnSaveAs(HWND hWnd)
     if (GetSaveFileNameA(&openfilename))
     {
         _splitpath(SaveFile, drive, dir, fname, ext);
-        if (_stricmp(ext, ".pj") == 0 || _stricmp(ext, ".zip") == 0)
+        if (strcmp(ext, ".pj") == 0 || strcmp(ext, ".zip") == 0)
         {
             _makepath(SaveFile, drive, dir, fname, NULL);
             _splitpath(SaveFile, drive, dir, fname, ext);
-            if (_stricmp(ext, ".pj") == 0)
+            if (strcmp(ext, ".pj") == 0)
             {
                 _makepath(SaveFile, drive, dir, fname, NULL);
             }

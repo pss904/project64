@@ -1721,7 +1721,7 @@ bool CN64System::SaveState()
         g_Settings->SaveDword(Game_LastSaveSlot, g_Settings->LoadDword(Game_CurrentSaveState));
     }
     stdstr_f target_ext("pj%s", Slot != 0 ? stdstr_f("%d", Slot).c_str() : "");
-    if (_stricmp(SaveFile.GetExtension().c_str(), target_ext.c_str()) != 0)
+    if (strcmp(SaveFile.GetExtension().c_str(), target_ext.c_str()) != 0)
     {
         SaveFile.SetNameExtension(stdstr_f("%s.%s", SaveFile.GetNameExtension().c_str(), target_ext.c_str()).c_str());
     }
@@ -1969,10 +1969,10 @@ bool CN64System::LoadState(const char * FileName)
 
     CPath SaveFile(FileName);
 
-    if (g_Settings->LoadDword(Setting_AutoZipInstantSave) || _stricmp(SaveFile.GetExtension().c_str(), ".zip") == 0)
+    if (g_Settings->LoadDword(Setting_AutoZipInstantSave) || strcmp(SaveFile.GetExtension().c_str(), ".zip") == 0)
     {
         //If ziping save add .zip on the end
-        if (!SaveFile.Exists() && _stricmp(SaveFile.GetExtension().c_str(), ".zip") != 0)
+        if (!SaveFile.Exists() && strcmp(SaveFile.GetExtension().c_str(), ".zip") != 0)
         {
             SaveFile.SetNameExtension(stdstr_f("%s.zip", SaveFile.GetNameExtension().c_str()).c_str());
         }

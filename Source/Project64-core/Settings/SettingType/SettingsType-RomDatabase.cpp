@@ -356,7 +356,7 @@ void CSettingTypeRomDatabase::Delete(uint32_t /*Index*/)
 
 bool CSettingTypeRomDatabase::IsVideoSetting(const char * Name)
 {
-    if (_strnicmp(Name, "Video-", 6) == 0)
+    if (strcmp(Name, "Video-") == 0)
     {
         return true;
     }
@@ -365,7 +365,7 @@ bool CSettingTypeRomDatabase::IsVideoSetting(const char * Name)
 
 bool CSettingTypeRomDatabase::IsAudioSetting(const char * Name)
 {
-    if (_strnicmp(Name, "Audio-", 6) == 0)
+    if (strcmp(Name, "Audio-") == 0)
     {
         return true;
     }
@@ -374,11 +374,11 @@ bool CSettingTypeRomDatabase::IsAudioSetting(const char * Name)
 
 const char * CSettingTypeRomDatabase::StripNameSection(const char * Name)
 {
-    if (_strnicmp(Name, "Video-", 6) == 0)
+    if (strcmp(Name, "Video-") == 0)
     {
         return &Name[6];
     }
-    if (_strnicmp(Name, "Audio-", 6) == 0)
+    if (strcmp(Name, "Audio-") == 0)
     {
         return &Name[6];
     }

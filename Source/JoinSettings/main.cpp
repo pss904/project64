@@ -12,16 +12,16 @@ struct compareKeyValueItem
     {
         std::string a = *struct1.first;
         std::string b = *struct2.first;
-        if (_stricmp(a.c_str(), "Name") == 0)
+        if (strcmp(a.c_str(), "Name") == 0)
         {
             return true;
         }
-        if (_stricmp(b.c_str(), "Name") == 0)
+        if (strcmp(b.c_str(), "Name") == 0)
         {
             return false;
         }
-        if (a.length() > 5 && _strnicmp(a.c_str(), "cheat", 5) == 0 &&
-            b.length() > 5 && _strnicmp(b.c_str(), "cheat", 5) == 0)
+        if (a.length() > 5 && strcmp(a.c_str(), "cheat", 5) == 0 &&
+            b.length() > 5 && strcmp(b.c_str(), "cheat", 5) == 0)
         {
             int i1 = atoi(&(*struct1.first)[5]);
             int i2 = atoi(&(*struct2.first)[5]);
@@ -39,9 +39,9 @@ struct compareKeyValueItem
             {
                 return false;
             }
-            return _stricmp(&a[5 + number_len], &b[5 + number_len]) <= 0;
+            return strcmp(&a[5 + number_len], &b[5 + number_len]) <= 0;
         }
-        return _stricmp(a.c_str(), b.c_str()) <= 0;
+        return strcmp(a.c_str(), b.c_str()) <= 0;
     }
 };
 

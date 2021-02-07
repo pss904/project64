@@ -689,7 +689,7 @@ LRESULT CEditCheat::OnAddCheat(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCt
     for (CEnhancementList::const_iterator itr = m_Cheats.begin(); itr != m_Cheats.end(); itr++)
     {
         const CEnhancement & Enhancement = itr->second;
-        if (_stricmp(Enhancement.GetName().c_str(), NewCheatName.c_str()) != 0)
+        if (strcmp(Enhancement.GetName().c_str(), NewCheatName.c_str()) != 0)
         {
             continue;
         }

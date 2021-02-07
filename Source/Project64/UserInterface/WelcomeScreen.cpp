@@ -55,7 +55,7 @@ LRESULT WelcomeScreen::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*l
     for (LanguageList::iterator Language = LangList.begin(); Language != LangList.end(); Language++)
     {
         int Index = LangCB.AddString(stdstr(Language->LanguageName).ToUTF16().c_str());
-        if (_stricmp(Language->LanguageName.c_str(), "English") == 0)
+        if (strcmp(Language->LanguageName.c_str(), "English") == 0)
         {
             LangCB.SetCurSel(Index);
         }

@@ -56,11 +56,11 @@ int main()
     {
         stdstr &line = VersionData[i];
         line += "\n";
-        if (_strnicmp(line.c_str(), "#define VERSION_BUILD", 21) == 0)
+        if (strcmp(line.c_str(), "#define VERSION_BUILD", 21) == 0)
         {
             line = "#define VERSION_BUILD               " + verinfo[1] + "\n";
         }
-        if (_strnicmp(line.c_str(), "#define GIT_VERSION", 18) == 0)
+        if (strcmp(line.c_str(), "#define GIT_VERSION", 18) == 0)
         {
             line = "#define GIT_VERSION                 \"" + verinfo[2] + "\"\n";
         }

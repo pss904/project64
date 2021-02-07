@@ -345,7 +345,7 @@ bool CIniFileBase::MoveToSectionNameData(const char * lpSectionName, bool Change
             m_lastSectionSearch = (m_File.GetPosition() - DataSize) + ReadPos;
             m_SectionsPos.insert(FILELOC::value_type(CurrentSection, m_lastSectionSearch));
 
-            if (_stricmp(lpSectionName, CurrentSection) != 0)
+            if (strcmp(lpSectionName, CurrentSection) != 0)
             {
                 continue;
             }

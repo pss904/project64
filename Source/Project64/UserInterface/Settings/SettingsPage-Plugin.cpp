@@ -66,7 +66,7 @@ void COptionPluginPage::AddPlugins(int ListId, SettingID Type, PLUGIN_TYPE Plugi
         {
             continue;
         }
-        if (_stricmp(Default.c_str(), Plugin->FileName.c_str()) == 0)
+        if (strcmp(Default.c_str(), Plugin->FileName.c_str()) == 0)
         {
             ComboBox->SetDefault((WPARAM)Plugin);
         }
@@ -187,7 +187,7 @@ void COptionPluginPage::UpdatePageSettings(void)
             {
                 continue;
             }
-            if (_stricmp(SelectedValue.c_str(), Plugin->FileName.c_str()) != 0)
+            if (strcmp(SelectedValue.c_str(), Plugin->FileName.c_str()) != 0)
             {
                 continue;
             }

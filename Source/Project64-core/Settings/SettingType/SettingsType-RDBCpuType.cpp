@@ -44,10 +44,10 @@ bool CSettingTypeRDBCpuType::Load (uint32_t Index, uint32_t & Value ) const
     }
     const char * String = strValue.c_str();
 
-    if (_stricmp(String,"Interpreter") == 0)      { Value = CPU_Interpreter; }
-    else if (_stricmp(String,"Recompiler") == 0)  { Value = CPU_Recompiler; }
-    else if (_stricmp(String,"SyncCores") == 0)   { Value = CPU_SyncCores; }
-    else if (_stricmp(String,"default") == 0)
+    if (strcmp(String,"Interpreter") == 0)      { Value = CPU_Interpreter; }
+    else if (strcmp(String,"Recompiler") == 0)  { Value = CPU_Recompiler; }
+    else if (strcmp(String,"SyncCores") == 0)   { Value = CPU_SyncCores; }
+    else if (strcmp(String,"default") == 0)
     {
         LoadDefault(Index,Value);
         return false;

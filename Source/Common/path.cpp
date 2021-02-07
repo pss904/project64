@@ -208,7 +208,7 @@ bool CPath::operator ==(const CPath& rPath) const
     rPath.GetFullyQualified(FullyQualified2);
 
     // Compare them
-    return _stricmp(FullyQualified1.c_str(), FullyQualified2.c_str()) == 0;
+    return strcmp(FullyQualified1.c_str(), FullyQualified2.c_str()) == 0;
 }
 
 //-------------------------------------------------------------
@@ -1569,7 +1569,7 @@ void CPath::cleanPathString(std::string& rDirectory) const
         pos = rDirectory.find(DIRECTORY_DELIMITER2, pos + 1);
     }
 
-    bool AppendEnd = !_strnicmp(rDirectory.c_str(), DIR_DOUBLEDELIM, 2);
+    bool AppendEnd = !strcmp(rDirectory.c_str(), DIR_DOUBLEDELIM, 2);
     pos = rDirectory.find(DIR_DOUBLEDELIM);
     while (pos != std::string::npos)
     {

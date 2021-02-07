@@ -37,15 +37,15 @@ bool CSettingTypeRDBYesNo::Load(uint32_t Index, bool & Value) const
     }
     const char * String = strValue.c_str();
 
-    if (_stricmp(String, "Yes") == 0)
+    if (strcmp(String, "Yes") == 0)
     {
         Value = true;
     }
-    else if (_stricmp(String, "No") == 0)
+    else if (strcmp(String, "No") == 0)
     {
         Value = false;
     }
-    else if (_stricmp(String, "default") == 0)
+    else if (strcmp(String, "default") == 0)
     {
         LoadDefault(Index, Value);
         return false;

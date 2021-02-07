@@ -11,7 +11,7 @@ int main (int argc, char *argv[])
 
 	struct insensitive_compare
 	{
-		bool operator() (const std::string & a, const std::string & b) const { return _stricmp(a.c_str(),b.c_str()) < 0; }
+		bool operator() (const std::string & a, const std::string & b) const { return strcmp(a.c_str(),b.c_str()) < 0; }
 	};
 
 	CIniFile RomIniFile(argv[1]);

@@ -188,7 +188,7 @@ void CNotificationImp::AddRecentDir(const char * RomDir)
     strlist::iterator iter;
     for (iter = RecentDirs.begin(); iter != RecentDirs.end(); iter++)
     {
-        if (_stricmp(RomDir, iter->c_str()) != 0)
+        if (strcmp(RomDir, iter->c_str()) != 0)
         {
             continue;
         }

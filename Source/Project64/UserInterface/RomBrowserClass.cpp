@@ -95,7 +95,7 @@ int32_t CRomBrowser::CalcSortPosition(uint32_t lParam)
         size_t index;
         for (index = 0; index < m_Fields.size(); index++)
         {
-            if (_stricmp(m_Fields[index].Name(), SortFieldName.c_str()) == 0) { break; }
+            if (strcmp(m_Fields[index].Name(), SortFieldName.c_str()) == 0) { break; }
         }
         if (index >= m_Fields.size()) { continue; }
         SORT_FIELD SortFieldInfo;
@@ -227,7 +227,7 @@ int32_t CRomBrowser::CalcSortPosition(uint32_t lParam)
         size_t index;
         for (index = 0; index < m_Fields.size(); index++)
         {
-            if (_stricmp(m_Fields[index].Name(), SortFieldName.c_str()) == 0) { break; }
+            if (strcmp(m_Fields[index].Name(), SortFieldName.c_str()) == 0) { break; }
         }
         if (index >= m_Fields.size()) { continue; }
         SORT_FIELD SortFieldInfo;
@@ -267,7 +267,7 @@ void CRomBrowser::RomAddedToList(int32_t ListPos)
     int32_t iItem = ListView_GetNextItem(m_hRomList, -1, LVNI_SELECTED);
 
     //if the last rom then highlight the item
-    if (iItem < 0 && _stricmp(m_RomInfo[ListPos].szFullFileName, m_LastRom.c_str()) == 0)
+    if (iItem < 0 && strcmp(m_RomInfo[ListPos].szFullFileName, m_LastRom.c_str()) == 0)
     {
         ListView_SetItemState(m_hRomList, index, LVIS_SELECTED | LVIS_FOCUSED, LVIS_SELECTED | LVIS_FOCUSED);
     }
@@ -358,7 +358,7 @@ void CRomBrowser::HighLightLastRom(void)
         }
 
         //if the last rom then highlight the item
-        if (_stricmp(pRomInfo->szFullFileName, m_LastRom.c_str()) == 0)
+        if (strcmp(pRomInfo->szFullFileName, m_LastRom.c_str()) == 0)
         {
             ListView_SetItemState(m_hRomList, index, LVIS_SELECTED | LVIS_FOCUSED, LVIS_SELECTED | LVIS_FOCUSED);
             ListView_EnsureVisible(m_hRomList, index, FALSE);
@@ -608,7 +608,7 @@ void CRomBrowser::RomList_ColoumnSortList(uint32_t pnmh)
         if (m_Fields[index].Pos() == (size_t)pnmv->iSubItem) { break; }
     }
     if (m_Fields.size() == index) { return; }
-    if (_stricmp(UISettingsLoadStringIndex(RomBrowser_SortFieldIndex, 0).c_str(), m_Fields[index].Name()) == 0)
+    if (strcmp(UISettingsLoadStringIndex(RomBrowser_SortFieldIndex, 0).c_str(), m_Fields[index].Name()) == 0)
     {
         UISettingsSaveBoolIndex(RomBrowser_SortAscendingIndex, 0, !UISettingsLoadBoolIndex(RomBrowser_SortAscendingIndex, 0));
     }
@@ -910,7 +910,7 @@ void CRomBrowser::RomList_SortList(void)
         size_t index;
         for (index = 0; index < m_Fields.size(); index++)
         {
-            if (_stricmp(m_Fields[index].Name(), SortFieldName.c_str()) == 0) { break; }
+            if (strcmp(m_Fields[index].Name(), SortFieldName.c_str()) == 0) { break; }
         }
         if (index >= m_Fields.size()) { continue; }
         SortFieldInfo._this = this;

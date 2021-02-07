@@ -139,7 +139,7 @@ void CMainGui::AddRecentRom(const char * ImagePath)
     strlist::iterator iter;
     for (iter = RecentGames.begin(); iter != RecentGames.end(); iter++)
     {
-        if (_stricmp(ImagePath, iter->c_str()) != 0)
+        if (strcmp(ImagePath, iter->c_str()) != 0)
         {
             continue;
         }
@@ -244,7 +244,7 @@ void CMainGui::GameCpuRunning(CMainGui * Gui)
 
             char String[100];
             RomIniFile.GetString("Rom Status", stdstr_f("%s.AutoFullScreen", Status.c_str()).c_str(), "true", String, sizeof(String));
-            if (_stricmp(String, "true") == 0)
+            if (strcmp(String, "true") == 0)
             {
                 g_Notify->ChangeFullScreen();
             }
@@ -1053,7 +1053,7 @@ LRESULT CALLBACK CMainGui::MainGui_Proc(HWND hWnd, DWORD uMsg, DWORD wParam, DWO
             DragFinish(hDrop);
 
             stdstr ext = CPath(filename).GetExtension();
-            if ((!(_stricmp(ext.c_str(), "ndd") == 0)) && (!(_stricmp(ext.c_str(), "d64") == 0)))
+            if ((!(strcmp(ext.c_str(), "ndd") == 0)) && (!(strcmp(ext.c_str(), "d64") == 0)))
             {
                 CN64System::RunFileImage(filename);
             }

@@ -514,7 +514,7 @@ bool CN64Rom::LoadN64Image(const char * FileLoc, bool LoadBootCodeOnly)
     bool Loaded7zFile = false;
 
 #ifdef _WIN32
-    if (strstr(FileLoc, "?") != NULL || _stricmp(ext.c_str(), "7z") == 0)
+    if (strstr(FileLoc, "?") != NULL || strcmp(ext.c_str(), "7z") == 0)
     {
         stdstr FullPath = FileLoc;
 
@@ -547,7 +547,7 @@ bool CN64Rom::LoadN64Image(const char * FileLoc, bool LoadBootCodeOnly)
             ZipFileName.FromUTF16(ZipFile.FileNameIndex(i).c_str());
             if (SubFile != NULL)
             {
-                if (_stricmp(ZipFileName.c_str(), SubFile) != 0)
+                if (strcmp(ZipFileName.c_str(), SubFile) != 0)
                 {
                     continue;
                 }
@@ -707,7 +707,7 @@ bool CN64Rom::LoadN64ImageIPL(const char * FileLoc, bool LoadBootCodeOnly)
     stdstr ext = CPath(FileLoc).GetExtension();
     bool Loaded7zFile = false;
 #ifdef _WIN32
-    if (strstr(FileLoc, "?") != NULL || _stricmp(ext.c_str(), "7z") == 0)
+    if (strstr(FileLoc, "?") != NULL || strcmp(ext.c_str(), "7z") == 0)
     {
         stdstr FullPath = FileLoc;
 
@@ -739,7 +739,7 @@ bool CN64Rom::LoadN64ImageIPL(const char * FileLoc, bool LoadBootCodeOnly)
             ZipFileName.FromUTF16(ZipFile.FileNameIndex(i).c_str());
             if (SubFile != NULL)
             {
-                if (_stricmp(ZipFileName.c_str(), SubFile) != 0)
+                if (strcmp(ZipFileName.c_str(), SubFile) != 0)
                 {
                     continue;
                 }

@@ -37,9 +37,9 @@ bool CSettingTypeRDBOnOff::Load (uint32_t Index, bool & Value ) const
     }
     const char * String = strValue.c_str();
 
-    if (_stricmp(String,"On") == 0)    { Value = true; }
-    else if (_stricmp(String,"Off") == 0)  { Value = false; }
-    else if (_stricmp(String,"Global") == 0 || _stricmp(String,"default"))
+    if (strcmp(String,"On") == 0)    { Value = true; }
+    else if (strcmp(String,"Off") == 0)  { Value = false; }
+    else if (strcmp(String,"Global") == 0 || strcmp(String,"default"))
     {
         LoadDefault(Index,Value);
         return false;

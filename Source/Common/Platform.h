@@ -5,7 +5,7 @@
 #include <stdarg.h>
 
 #define _stricmp strcasecmp
-#define _strnicmp strncasecmp
+#define strcasecmp strncasecmp
 #define _snprintf snprintf
 #define _isnan isnan
 

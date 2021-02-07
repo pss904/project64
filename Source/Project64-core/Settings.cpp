@@ -449,7 +449,7 @@ uint32_t CSettings::FindSetting(CSettings * _this, const char * Name)
         if (Setting->GetSettingType() == SettingType_GameSetting)
         {
             CSettingTypeGame * GameSetting = (CSettingTypeGame *)Setting;
-            if (_stricmp(GameSetting->GetKeyName(), Name) != 0)
+            if (strcmp(GameSetting->GetKeyName(), Name) != 0)
             {
                 continue;
             }
@@ -462,7 +462,7 @@ uint32_t CSettings::FindSetting(CSettings * _this, const char * Name)
         else if (Setting->GetSettingType() == SettingType_CfgFile)
         {
             CSettingTypeApplication * CfgSetting = (CSettingTypeApplication *)Setting;
-            if (_stricmp(CfgSetting->GetKeyName(), Name) != 0)
+            if (strcmp(CfgSetting->GetKeyName(), Name) != 0)
             {
                 continue;
             }
@@ -475,7 +475,7 @@ uint32_t CSettings::FindSetting(CSettings * _this, const char * Name)
         else if (Setting->GetSettingType() == SettingType_SelectedDirectory)
         {
             CSettingTypeSelectedDirectory * SelectedDirectory = (CSettingTypeSelectedDirectory *)Setting;
-            if (_stricmp(SelectedDirectory->GetName(), Name) != 0)
+            if (strcmp(SelectedDirectory->GetName(), Name) != 0)
             {
                 continue;
             }
@@ -488,7 +488,7 @@ uint32_t CSettings::FindSetting(CSettings * _this, const char * Name)
         else if (Setting->GetSettingType() == SettingType_BoolVariable)
         {
             CSettingTypeTempBool * BoolSetting = (CSettingTypeTempBool *)Setting;
-            if (_stricmp(BoolSetting->GetName(), Name) != 0)
+            if (strcmp(BoolSetting->GetName(), Name) != 0)
             {
                 continue;
             }

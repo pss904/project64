@@ -74,7 +74,7 @@ void CGamePluginPage::AddPlugins(int ListId, SettingID Type, PLUGIN_TYPE PluginT
         {
             continue;
         }
-        if (PluginSelected && _stricmp(Default.c_str(), Plugin->FileName.c_str()) == 0)
+        if (PluginSelected && strcmp(Default.c_str(), Plugin->FileName.c_str()) == 0)
         {
             ComboBox->SetDefault((WPARAM)Plugin);
         }
@@ -193,7 +193,7 @@ void CGamePluginPage::UpdatePageSettings(void)
                 {
                     continue;
                 }
-                if (_stricmp(SelectedValue.c_str(), Plugin->FileName.c_str()) != 0)
+                if (strcmp(SelectedValue.c_str(), Plugin->FileName.c_str()) != 0)
                 {
                     continue;
                 }

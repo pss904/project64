@@ -34,9 +34,9 @@ int WINAPI WinMain(HINSTANCE /*hInstance*/, HINSTANCE /*hPrevInstance*/, LPSTR /
             stdstr ext = CPath(g_Settings->LoadStringVal(Cmd_RomFile)).GetExtension();
 
             if (g_Settings->LoadStringVal(Cmd_ComboDiskFile).length() > 0
-                && ((_stricmp(extcombo.c_str(), "ndd") == 0) || (_stricmp(extcombo.c_str(), "d64") == 0)))
+                && ((strcmp(extcombo.c_str(), "ndd") == 0) || (strcmp(extcombo.c_str(), "d64") == 0)))
             {
-                if ((!(_stricmp(ext.c_str(), "ndd") == 0)) && (!(_stricmp(ext.c_str(), "d64") == 0)))
+                if ((!(strcmp(ext.c_str(), "ndd") == 0)) && (!(strcmp(ext.c_str(), "d64") == 0)))
                 {
                     //Cmd_ComboDiskFile must be a 64DD disk image
                     //Cmd_RomFile must be a N64 ROM image
@@ -51,7 +51,7 @@ int WINAPI WinMain(HINSTANCE /*hInstance*/, HINSTANCE /*hPrevInstance*/, LPSTR /
             MainWindow.Show(true);	//Show the main window
 
             stdstr ext = CPath(g_Settings->LoadStringVal(Cmd_RomFile)).GetExtension();
-            if ((!(_stricmp(ext.c_str(), "ndd") == 0)) && (!(_stricmp(ext.c_str(), "d64") == 0)))
+            if ((!(strcmp(ext.c_str(), "ndd") == 0)) && (!(strcmp(ext.c_str(), "d64") == 0)))
             {
                 //File Extension is not *.ndd/*.d64 so it should be a N64 ROM
                 isROMLoaded = CN64System::RunFileImage(g_Settings->LoadStringVal(Cmd_RomFile).c_str());
